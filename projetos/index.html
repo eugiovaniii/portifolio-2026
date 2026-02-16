@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Landing page de agência de viagens com destinos, serviços e simulador de orçamento.">
+  <title>Viagem dos Sonhos | Projeto de Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Fraunces:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#inicio" class="brand">Viagem dos Sonhos</a>
+      <nav class="site-nav">
+        <a href="#pacotes">Pacotes</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#orcamento">Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-slider" id="heroSlider">
+          <figure class="slide is-active">
+            <img src="src/img/carousel/sunset-656967_1280.jpg" alt="Pôr do sol em paisagem montanhosa">
+            <figcaption>Pôr do sol em cenário natural</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="src/img/carousel/sunset-7076676_1280.jpg" alt="Montanhas com névoa ao amanhecer">
+            <figcaption>Montanhas e trilhas para explorar</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="src/img/carousel/sunset-7865844_1280.jpg" alt="Praia com tons quentes de fim de tarde">
+            <figcaption>Praias paradisíacas no Brasil</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="src/img/carousel/sunset-7898136_1280.jpg" alt="Floresta iluminada por luz dourada">
+            <figcaption>Experiências de ecoturismo e aventura</figcaption>
+          </figure>
+
+          <button class="slide-btn prev" id="prevSlideBtn" type="button" aria-label="Slide anterior">‹</button>
+          <button class="slide-btn next" id="nextSlideBtn" type="button" aria-label="Próximo slide">›</button>
+          <div class="slide-dots" id="slideDots" aria-label="Controle do carrossel"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Projeto front-end</p>
+          <h1>Planeje sua próxima viagem com clareza e praticidade.</h1>
+          <p>
+            Landing page com catálogo de destinos, comparação de serviços e simulador
+            de orçamento para transformar intenção de compra em decisão.
+          </p>
+          <a href="#orcamento" class="btn btn-primary">Simular orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pacotes">
+      <div class="container">
+        <h2>Pacotes em destaque</h2>
+        <div class="package-grid">
+          <article class="package-card">
+            <h3>Praias do Nordeste</h3>
+            <p>Roteiro com mar cristalino e hospedagem próxima da orla.</p>
+            <p class="price-from">A partir de R$ 2.490 por pessoa</p>
+          </article>
+          <article class="package-card">
+            <h3>Serra e Montanha</h3>
+            <p>Experiência para clima frio, gastronomia e turismo de natureza.</p>
+            <p class="price-from">A partir de R$ 1.990 por pessoa</p>
+          </article>
+          <article class="package-card">
+            <h3>Premium Noronha</h3>
+            <p>Pacote exclusivo com atividades e suporte completo de logística.</p>
+            <p class="price-from">A partir de R$ 4.990 por pessoa</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destinos">
+      <div class="container">
+        <h2>Destinos</h2>
+        <div class="destinations-grid">
+          <figure>
+            <img src="src/img/Ubatuba-O-que-Fazer-Praias-6.jpg.webp" alt="Praia em Ubatuba">
+            <figcaption>Ubatuba, São Paulo</figcaption>
+          </figure>
+          <figure>
+            <img src="src/img/Maragogi-O-que-fazer-Praias-4.jpg.webp" alt="Praia de Maragogi">
+            <figcaption>Maragogi, Alagoas</figcaption>
+          </figure>
+          <figure>
+            <img src="src/img/Arraial-do-Cabo-O-que-Fazer.jpg.webp" alt="Praia em Arraial do Cabo">
+            <figcaption>Arraial do Cabo, Rio de Janeiro</figcaption>
+          </figure>
+          <figure>
+            <img src="src/img/Fernando-de-Noronha-O-que-fazer-28.jpg.webp" alt="Vista de Fernando de Noronha">
+            <figcaption>Fernando de Noronha, Pernambuco</figcaption>
+          </figure>
+          <figure>
+            <img src="src/img/Portal-de-entrada-Gramado.webp" alt="Portal de entrada de Gramado">
+            <figcaption>Gramado, Rio Grande do Sul</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <h2>Serviços e taxas</h2>
+        <div class="service-grid">
+          <table>
+            <caption>Valores estimados por serviço</caption>
+            <thead>
+              <tr>
+                <th>Serviço</th>
+                <th>Valor base</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Emissão de passagens</td>
+                <td>R$ 850 por pessoa</td>
+              </tr>
+              <tr>
+                <td>Hospedagem</td>
+                <td>R$ 210 por dia (quarto duplo)</td>
+              </tr>
+              <tr>
+                <td>Aluguel de veículo</td>
+                <td>R$ 180 por dia</td>
+              </tr>
+              <tr>
+                <td>Seguro viagem</td>
+                <td>R$ 35 por pessoa/dia</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <article class="service-note">
+            <h3>Atendimento consultivo</h3>
+            <p>
+              Nosso fluxo inclui orientação de roteiro, validação de datas e apoio na decisão
+              com base no seu perfil de viagem.
+            </p>
+            <p>
+              O simulador abaixo entrega um valor estimado para acelerar seu planejamento.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="orcamento">
+      <div class="container quote-layout">
+        <form id="quoteForm" class="quote-form card" novalidate>
+          <h2>Solicitar orçamento</h2>
+
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+          <label for="destino">Destino</label>
+          <select id="destino" name="destino">
+            <option value="ubatuba">Ubatuba</option>
+            <option value="maragogi">Maragogi</option>
+            <option value="arraial">Arraial do Cabo</option>
+            <option value="noronha">Fernando de Noronha</option>
+            <option value="gramado">Gramado</option>
+          </select>
+
+          <div class="inline-fields">
+            <div>
+              <label for="qtdPessoas">Pessoas</label>
+              <input type="number" id="qtdPessoas" name="qtdPessoas" min="1" max="12" value="2">
+            </div>
+            <div>
+              <label for="qtdDias">Dias</label>
+              <input type="number" id="qtdDias" name="qtdDias" min="1" max="30" value="5">
+            </div>
+          </div>
+
+          <div class="inline-fields">
+            <div>
+              <label for="dataIda">Data de ida</label>
+              <input type="date" id="dataIda" name="dataIda">
+            </div>
+            <div>
+              <label for="dataVolta">Data de volta</label>
+              <input type="date" id="dataVolta" name="dataVolta">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Serviços adicionais</legend>
+            <label><input type="checkbox" name="servicos" value="passagens"> Passagens</label>
+            <label><input type="checkbox" name="servicos" value="hospedagem"> Hospedagem</label>
+            <label><input type="checkbox" name="servicos" value="aluguel"> Aluguel de veículo</label>
+            <label><input type="checkbox" name="servicos" value="seguro"> Seguro viagem</label>
+            <label><input type="checkbox" name="servicos" value="cityTour"> City tour</label>
+          </fieldset>
+
+          <button class="btn btn-primary" type="submit">Calcular estimativa</button>
+        </form>
+
+        <aside class="quote-result card" id="quoteResult">
+          <h2>Resumo da estimativa</h2>
+          <p class="quote-helper">Preencha o formulário para gerar o valor estimado.</p>
+          <p class="quote-total" id="quoteTotal">R$ 0,00</p>
+          <ul id="quoteBreakdown"></ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projeto desenvolvido por Giovani Pereira Macedo &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
