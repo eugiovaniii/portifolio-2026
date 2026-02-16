@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Aplicação de tarefas com criação, filtro, busca, conclusão e persistência local.">
+  <title>Gerenciador de Tarefas | Projeto de Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="task-header">
+    <div class="container">
+      <p class="eyebrow">Projeto front-end</p>
+      <h1>Gerenciador de Tarefas</h1>
+      <p class="subtitle">Organize tarefas por prioridade, status e prazo.</p>
+    </div>
+  </header>
+
+  <main class="container task-layout">
+    <section class="card composer" aria-label="Nova tarefa">
+      <h2>Nova tarefa</h2>
+      <form id="taskForm" class="task-form" novalidate>
+        <div class="field-grow">
+          <label for="taskInput">Descrição</label>
+          <input type="text" id="taskInput" maxlength="120" placeholder="Ex.: revisar README do projeto" required>
+        </div>
+
+        <div>
+          <label for="taskPriority">Prioridade</label>
+          <select id="taskPriority">
+            <option value="alta">Alta</option>
+            <option value="media" selected>Média</option>
+            <option value="baixa">Baixa</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="taskDueDate">Prazo</label>
+          <input type="date" id="taskDueDate">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="card controls" aria-label="Filtros da lista">
+      <div class="search-wrap">
+        <label for="searchInput">Buscar tarefa</label>
+        <input type="search" id="searchInput" placeholder="Filtrar por texto">
+      </div>
+
+      <div class="filter-group" role="tablist" aria-label="Filtro por status">
+        <button class="btn btn-filter is-active" type="button" data-filter="all">Todas</button>
+        <button class="btn btn-filter" type="button" data-filter="pending">Pendentes</button>
+        <button class="btn btn-filter" type="button" data-filter="completed">Concluídas</button>
+      </div>
+
+      <div class="stats" id="taskStats">
+        <p><strong id="totalCount">0</strong> no total</p>
+        <p><strong id="pendingCount">0</strong> pendentes</p>
+        <p><strong id="completedCount">0</strong> concluídas</p>
+      </div>
+
+      <button id="clearCompletedBtn" class="btn btn-ghost" type="button">Limpar concluídas</button>
+    </section>
+
+    <section class="card list-card" aria-label="Lista de tarefas">
+      <div class="list-head">
+        <h2>Lista</h2>
+      </div>
+      <p id="emptyState" class="empty-state">Nenhuma tarefa cadastrada.</p>
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="task-footer">
+    <p>Projeto desenvolvido por Giovani Pereira Macedo &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
