@@ -1,5 +1,7 @@
 # Portfólio Web - Giovani Pereira Macedo
 
+https://eugiovaniii.github.io/portifolio-2026/
+
 Portfólio pessoal com foco em apresentação profissional, projetos práticos e evolução técnica.
 
 ## O que foi reestruturado
