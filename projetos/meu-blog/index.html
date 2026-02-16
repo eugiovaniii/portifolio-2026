@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Mini projeto de blog local com criação de posts, busca e persistência via localStorage.">
+  <title>Meu Blog | Projeto de Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="blog-header">
+    <div class="container">
+      <p class="eyebrow">Projeto front-end</p>
+      <h1>Meu Blog</h1>
+      <p class="subtitle">Publicações locais com foco em UX, busca e manipulação de DOM.</p>
+    </div>
+  </header>
+
+  <main class="container blog-layout">
+    <section class="card controls" aria-label="Controles do feed">
+      <div class="search-block">
+        <label for="searchInput">Buscar no feed</label>
+        <input type="search" id="searchInput" placeholder="Digite título ou conteúdo">
+        <p id="resultCount" class="helper">0 resultados</p>
+      </div>
+
+      <div class="view-block">
+        <p>Visualização</p>
+        <label class="switch" title="Alternar visualização de layout">
+          <input type="checkbox" id="viewToggle">
+          <span class="slider"></span>
+        </label>
+        <span id="viewModeLabel" class="view-label">Desktop</span>
+      </div>
+    </section>
+
+    <section class="card composer" aria-label="Criação de post">
+      <div class="composer-head">
+        <h2>Novo post</h2>
+        <button id="newPostBtn" class="btn btn-ghost" type="button">Escrever post</button>
+      </div>
+
+      <form id="postForm" class="hidden" novalidate>
+        <label for="postTitle">Título</label>
+        <input type="text" id="postTitle" maxlength="80" placeholder="Título do post" required>
+
+        <label for="postContent">Conteúdo</label>
+        <textarea id="postContent" rows="6" maxlength="800" placeholder="Escreva seu conteúdo..." required></textarea>
+
+        <div class="form-actions">
+          <button type="button" id="cancelPostBtn" class="btn btn-ghost">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Publicar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card feed" aria-label="Feed de posts">
+      <div class="feed-head">
+        <h2>Feed</h2>
+      </div>
+      <p id="emptyState" class="empty-state">Nenhum post ainda. Crie o primeiro.</p>
+      <div id="postsContainer" class="posts-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="blog-footer">
+    <p>Projeto desenvolvido por Giovani Pereira Macedo &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
